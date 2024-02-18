@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/925.81df7e1a.chunk.js","mappings":"iKASA,UAPsB,WAClB,OACIA,EAAAA,EAAAA,KAAA,SAGR,C","sources":["components/pages/FavoritesPage/FavoritesPage.jsx"],"sourcesContent":["import React from \"react\";\n\nconst FavoritesPage = () => {\n    return (\n        <div>\n        </div>\n    )\n}\n\nexport default FavoritesPage;"],"names":["_jsx"],"sourceRoot":""}
