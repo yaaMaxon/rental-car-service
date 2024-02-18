@@ -4,7 +4,10 @@ import { Link } from "react-router-dom";
 
 
 export const HeaderWrap = styled.header`
-  color: white;
+  color: ${props =>
+    props.$location === '/'
+      ? "#FFF"
+      : "#0B44CD"};
   position: absolute;
   top: 0;
   left: 50%;
@@ -18,6 +21,11 @@ export const HeaderWrap = styled.header`
   flex-direction: column;
 
   padding: 17px 0px;
+
+  & .container {
+    display: flex;
+    justify-content: space-between;
+  }
 `
 
 export const Navigation = styled.nav`

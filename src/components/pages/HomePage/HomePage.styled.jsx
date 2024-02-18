@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 
-import bg_car_image from "../../../img/bg-image/bg-car-image.jpg";
+import bg_car_image from "../../../img/bg-image/bg-car-image.webp";
 
 export const HomeSection = styled.section`
   background-image: url(${bg_car_image});

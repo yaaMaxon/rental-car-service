@@ -1,10 +1,13 @@
 import React from "react";
 import { HeaderWrap, Navigation, HeaderLink, Logo } from "./Header.styled";
 import Container from "components/Container/Container";
+import { useLocation } from "react-router-dom";
 
 const Header = () => {
+   const location = useLocation();
+
     return (
-   <HeaderWrap>
+   <HeaderWrap $location={location.pathname}>
      <Container>
         <Logo to="/">RENTCAR</Logo>
         <Navigation>

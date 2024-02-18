@@ -1,8 +1,8 @@
 import React from "react";
-import { Box } from "./Container.styled";
+import { Box } from './Container.styled';
 
 const Container = ({ children }) => {
-    return <Box>{ children }</Box>
-}
+  return <Box className="container">{children}</Box>;
+};
 
 export default Container;

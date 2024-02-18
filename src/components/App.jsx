@@ -1,13 +1,16 @@
 import { Navigate, Route, Routes } from "react-router-dom";
-import { lazy } from "react";
 import SharedLayout from "./SharedLayout.jsx/SharedLayout.jsx";
 
-const HomePage = lazy(() => import("./pages/HomePage/HomePage.jsx"));
-const CatalogPage = lazy(() => import("./pages/CatalogPage/CatalogPage.jsx"));
-const FavoritesPage = lazy(() => import("./pages/FavoritesPage/FavoritesPage.jsx"));
+import HomePage from "./pages/HomePage/HomePage.jsx";
+import CatalogPage from "./pages/CatalogPage/CatalogPage.jsx";
+import FavoritesPage from "./pages/FavoritesPage/FavoritesPage.jsx";
+import ModalCarCard from "./pages/modal/ModalCarCard.jsx";
 
-export const App = () => {
+import { ToastContainer } from "react-toastify";
+
+const App = () => {
   return (
+    <>
     <Routes>
       <Route path="/" element={ <SharedLayout/> }>
        <Route index element={ <HomePage/> }/>
@@ -16,5 +19,22 @@ export const App = () => {
        <Route path="*" element={ <Navigate to="/"/> }/>
       </Route>
     </Routes>
+    <ModalCarCard />
+    <ToastContainer
+        position="bottom-right"
+        autoClose={1500}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
+    </>
   );
 };
+
+export { App };
+
